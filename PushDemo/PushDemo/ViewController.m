@@ -8,6 +8,9 @@
 
 #import "ViewController.h"
 #import <BmobSDK/Bmob.h>
+#import "GetPropertyUtil.h"
+#import "Test.h"
+
 
 @interface ViewController ()
 
@@ -26,9 +29,17 @@
     self.tableView.dataSource = self;
     self.tableView.delegate  = self;
     
+    Test *test = [[Test alloc] init];
+    test.title = @"title1";
+//    test.name = @"name1";
     
     
-    
+    Test *test1 = [[Test alloc] init];
+    test1.title = @"title2";
+    test1.name = @"name2";
+
+    NSLog(@"test %@",[GetPropertyUtil classPropsFor:[test class]]);
+    NSLog(@"test %@",[GetPropertyUtil classPropsFor:[test1 class]]);
 }
 
 
@@ -48,22 +59,6 @@
     
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #pragma mark - UITableView Datasource
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -76,13 +71,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     static NSString *cellIdentifier = @"Cell";
-    
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
-    
     if(cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellIdentifier];
     }
-    
     cell.textLabel.text = [NSString stringWithFormat:@"%@",self.dataArray[ indexPath.row]];
     
     return cell;
@@ -105,24 +97,16 @@
 }
 
 
-
-
-
-
-
-
-
 #pragma mark - push method
 
 -(void)pushToOneAppleDevice{
     BmobPush *push = [BmobPush push];
     BmobQuery *query = [BmobInstallation query];
-    [query whereKey:@"deviceToken" equalTo:@""];
+    [query whereKey:@"deviceToken" equalTo:@"4728918256a2d3101dae25bd4d37773094e155c4e2619b2a2c6564b854176dae"];
     
     NSString *dateString = [self.dateFormatter stringFromDate:[NSDate date]];
     NSString *alertString = [NSString stringWithFormat:@"push test time %@",dateString];
     NSDictionary *pushContentDic = @{@"aps":@{@"alert":alertString,@"sound":@"default",@"badge":@1}};
-    
     [push setQuery:query];
     [push setData:pushContentDic];
     [push sendPushInBackgroundWithBlock:^(BOOL isSuccessful, NSError *error) {

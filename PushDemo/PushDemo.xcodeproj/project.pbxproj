@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		9492990C69B954EA8BC6A067 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 0B4AE8F53B5A9FEA4AC2A8EC /* libPods.a */; };
+		BEA273931B14774B00075339 /* GetPropertyUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA273921B14774B00075339 /* GetPropertyUtil.m */; };
+		BEA273961B1477F700075339 /* Test.m in Sources */ = {isa = PBXBuildFile; fileRef = BEA273951B1477F700075339 /* Test.m */; };
 		ED40806B1B1369420077C1B7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = ED40806A1B1369420077C1B7 /* main.m */; };
 		ED40806E1B1369420077C1B7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = ED40806D1B1369420077C1B7 /* AppDelegate.m */; };
 		ED4080711B1369420077C1B7 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED4080701B1369420077C1B7 /* ViewController.m */; };
@@ -31,6 +33,10 @@
 		0B4AE8F53B5A9FEA4AC2A8EC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE6032BE3E330D387E77564 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A9996DB436EA102F05BED308 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		BEA273911B14774B00075339 /* GetPropertyUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetPropertyUtil.h; sourceTree = "<group>"; };
+		BEA273921B14774B00075339 /* GetPropertyUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetPropertyUtil.m; sourceTree = "<group>"; };
+		BEA273941B1477F700075339 /* Test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Test.h; sourceTree = "<group>"; };
+		BEA273951B1477F700075339 /* Test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Test.m; sourceTree = "<group>"; };
 		ED4080651B1369420077C1B7 /* PushDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PushDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED4080691B1369420077C1B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED40806A1B1369420077C1B7 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +119,10 @@
 				ED4080751B1369420077C1B7 /* Images.xcassets */,
 				ED4080771B1369420077C1B7 /* LaunchScreen.xib */,
 				ED4080681B1369420077C1B7 /* Supporting Files */,
+				BEA273911B14774B00075339 /* GetPropertyUtil.h */,
+				BEA273921B14774B00075339 /* GetPropertyUtil.m */,
+				BEA273941B1477F700075339 /* Test.h */,
+				BEA273951B1477F700075339 /* Test.m */,
 			);
 			path = PushDemo;
 			sourceTree = "<group>";
@@ -278,9 +288,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BEA273961B1477F700075339 /* Test.m in Sources */,
 				ED4080711B1369420077C1B7 /* ViewController.m in Sources */,
 				ED40806E1B1369420077C1B7 /* AppDelegate.m in Sources */,
 				ED40806B1B1369420077C1B7 /* main.m in Sources */,
+				BEA273931B14774B00075339 /* GetPropertyUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
