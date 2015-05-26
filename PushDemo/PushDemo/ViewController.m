@@ -102,7 +102,7 @@
 -(void)pushToOneAppleDevice{
     BmobPush *push = [BmobPush push];
     BmobQuery *query = [BmobInstallation query];
-    [query whereKey:@"deviceToken" equalTo:@"4728918256a2d3101dae25bd4d37773094e155c4e2619b2a2c6564b854176dae"];
+    [query whereKey:@"deviceToken" equalTo:@""];
     
     NSString *dateString = [self.dateFormatter stringFromDate:[NSDate date]];
     NSString *alertString = [NSString stringWithFormat:@"push test time %@",dateString];
