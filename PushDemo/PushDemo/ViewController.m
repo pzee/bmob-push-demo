@@ -38,7 +38,7 @@
     test1.title = @"title2";
     test1.name = @"name2";
 
-    NSLog(@"test %@",[GetPropertyUtil classPropsFor:[test class]]);
+    NSLog(@"test %@  title %@  name%@",[GetPropertyUtil classPropsFor:[test class]],[test valueForKey:@"title"],[test valueForKey:@"name"]);
     NSLog(@"test %@",[GetPropertyUtil classPropsFor:[test1 class]]);
 }
 
