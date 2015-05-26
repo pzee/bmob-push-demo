@@ -13,7 +13,7 @@
 int main(int argc, char * argv[]) {
     @autoreleasepool {
 #warning 填写key
-        [Bmob registerWithAppKey:@"c054f26635406ed0cc893b9d6d890992"];
+        [Bmob registerWithAppKey:@""];
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
